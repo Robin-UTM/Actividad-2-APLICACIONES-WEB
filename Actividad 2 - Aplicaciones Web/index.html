@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicaciones web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<button class="open-modal-btn" onclick="openCalculator()">Abrir Calculadora</button>
+
+<div id="calculatorModal" class="modal">
+  <div class="modal-content">
+    <div class="calculator">
+      <form name="calculator">
+        <input type="textfield" name="ans" value="">
+        <br>
+        <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+        <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+        <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+        <input type="button" value="+" onClick="document.calculator.ans.value+='+'">
+        <br>
+        <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+        <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+        <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+        <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+        <br>
+        <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
+        <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+        <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+        <input type="button" value="*" onClick="document.calculator.ans.value+='*'">
+        <br>
+        <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+        <input type="reset" value="c">
+        <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+        <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+      </form>
+    </div>
+    <button onclick="closeCalculator()">Cerrar</button>
+  </div>
+</div>
+
+<button class="open-modal-btn" onclick="openPdfViewer()">Abrir PDF Viewer</button>
+
+<div id="pdfViewerModal" class="modal">
+  <div class="modal-content">
+    <iframe width="1000" height="800" src="https://www.youtube.com/embed/C3GouGa0noM?si=JBNHTegnJ2n-n6Om" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <button onclick="closePdfViewer()">Cerrar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<footer>
+    <p>&copy; 2023 Rezabala Montes Robinson </p>
+  </footer>
+</body>
+</html>
